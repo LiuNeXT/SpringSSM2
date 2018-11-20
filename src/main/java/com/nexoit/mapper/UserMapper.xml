@@ -5,26 +5,26 @@
 
 <mapper namespace="com.nexoit.mapper.UserMapper">
 
-    <!--添加用户-->
-    <insert id="addUser" parameterMap="User">
+<!--    &lt;!&ndash;添加用户&ndash;&gt;
+    <insert id="addUser" parameterMap="com.nexoit.pojo.User">
         insert into user(uid,username,password,age,gender,email)
  		values(#{uid},#{username},#{password},#{age},#{gender},#{email})
     </insert>
 
-    <!--通过 id查询 用户-->
-    <select id="findUserById" parameterType="Integer"  resultType="User">
+    &lt;!&ndash;通过 id查询 用户&ndash;&gt;
+    <select id="findUserById" parameterType="Integer"  resultType="com.nexoit.pojo.User">
         select * from user where uid = #{uid}
-    </select>
+    </select>-->
 
     <!-- 查询所有用户 -->
-    <select id="getUserList" resultType="User">
+    <select id="getUserList" resultType="com.nexoit.pojo.User">
         select * from user
     </select>
 
     <!-- 根据用户名模糊查询用户 -->
-    <select id="getUserListByName" parameterType="String" resultType="User">
+<!--    <select id="getUserListByName" parameterType="String" resultType="com.nexoit.pojo.User">
         select * from user where username like "%"#{username}"%" limit 0,5
-    </select>
+    </select>-->
 
 </mapper>
 

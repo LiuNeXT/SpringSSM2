@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import java.util.List;
 
 @Controller
+@RequestMapping("/view")
 public class PageController {
 
 
@@ -20,7 +21,7 @@ public class PageController {
 
     //默认设置跳转首页
     @RequestMapping("/")
-    public String showIndex() throws Exception {
+    public String showIndex() {
         return "index";
     }
 

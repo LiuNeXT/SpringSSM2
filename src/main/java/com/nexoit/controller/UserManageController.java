@@ -16,7 +16,7 @@ public class UserManageController {
     private UserService userService;
 
 
-    //根据用户id查找用户，返回json格式
+  /*  //根据用户id查找用户，返回json格式
     @RequestMapping("/findUser_{uid}")
     @ResponseBody
     public User getUserById(@PathVariable Integer uid) throws Exception {
@@ -45,6 +45,6 @@ public class UserManageController {
             return "login";
         }
     }
-
+*/
 
 }

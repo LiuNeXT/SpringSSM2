@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>注册成功</h1>
-<p>欢迎您，${user}</p>
+<p>欢迎您，${userlist}</p>
 </body>
 </html>
 

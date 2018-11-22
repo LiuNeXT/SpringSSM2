@@ -5,26 +5,37 @@
 
 <mapper namespace="com.nexoit.mapper.UserMapper">
 
-<!--    &lt;!&ndash;添加用户&ndash;&gt;
-    <insert id="addUser" parameterMap="com.nexoit.pojo.User">
-        insert into user(uid,username,password,age,gender,email)
- 		values(#{uid},#{username},#{password},#{age},#{gender},#{email})
-    </insert>
 
-    &lt;!&ndash;通过 id查询 用户&ndash;&gt;
-    <select id="findUserById" parameterType="Integer"  resultType="com.nexoit.pojo.User">
-        select * from user where uid = #{uid}
-    </select>-->
 
     <!-- 查询所有用户 -->
     <select id="getUserList" resultType="com.nexoit.pojo.User">
         select * from user
     </select>
 
-    <!-- 根据用户名模糊查询用户 -->
-<!--    <select id="getUserListByName" parameterType="String" resultType="com.nexoit.pojo.User">
-        select * from user where username like "%"#{username}"%" limit 0,5
-    </select>-->
+    <!--根据用户名查用户-->
+    <select id="findUserByName" parameterType="string" resultType="com.nexoit.pojo.User">
+        select * from  user where username = #{username}
+    </select>
+
+    <!--用户登录-->
+    <select id="findUsernameAndPassword" parameterType="com.nexoit.pojo.User" resultType="com.nexoit.pojo.User">
+        select * from user
+        <where>
+            <if test="username != null and username != '' ">
+                username = #{username}
+            </if>
+            <if test="password != null and password != '' ">
+                and password = #{password}
+            </if>
+        </where>
+    </select>
+
+    <!--新增用户-->
+    <insert id="addUser" parameterType="com.nexoit.pojo.User">
+        insert into user(uid, username, password, age, gender, email) VALUES (
+        #{uid},#{username},#{password},#{age},#{gender},#{email})
+    </insert>
+
 
 </mapper>
 

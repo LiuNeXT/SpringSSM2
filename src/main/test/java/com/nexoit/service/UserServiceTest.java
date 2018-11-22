@@ -32,4 +32,27 @@ public class UserServiceTest {
             System.out.println(u.toString());
         }
     }
+
+    @Test
+    public  void findUserByName() throws  Exception{
+         User user = userService.findUserByName("fiona");
+        System.out.println(user);
+    }
+
+    @Test
+    public  void findUsernameAndPassword() throws Exception{
+         User user = new User();
+         user.setUsername("fiona");
+         user.setPassword("1234");
+         User user1 = userService.findUsernameAndPassword(user);
+        System.out.println(user1);
+    }
+
+    @Test
+    public void addUser() throws Exception{
+        User user = new User(4,"Apple","131513512",29,"1","i@nexoit.cn");
+            userService.addUser(user);
+        System.out.println(user);
+
+    }
 }

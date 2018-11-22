@@ -61,6 +61,18 @@ public class User implements Serializable {
         return email;
     }
 
+    public User() {
+    }
+
+    public User(Integer uid, String username, String password, Integer age, String gender, String email) {
+        this.uid = uid;
+        this.username = username;
+        this.password = password;
+        this.age = age;
+        this.gender = gender;
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "User{" +

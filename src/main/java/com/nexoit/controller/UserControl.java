@@ -6,10 +6,7 @@ import com.nexoit.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,21 +19,25 @@ public class UserControl {
 
     @RequestMapping(value = "/getuserlist",method = RequestMethod.GET)
     @ResponseBody  //返回Json格式
-    public List<User> getUserList(Model model) throws Exception {
+    public List<User> getUserList() throws Exception {
         List<User> userList = userService.getUserList();
         return userList;
 
     }
 
-
-    //根据用户id查找用户，返回json格式
-/*    @RequestMapping("/findUser_{uid}")
+    @RequestMapping(value = "/checkUsername", method = RequestMethod.POST)
     @ResponseBody
-    public User getUserById(@PathVariable Integer uid) throws Exception {
-        User user = userService.findUserById(uid);
-        return user;
-    }*/
+    public String checkUserName (String username) throws Exception{
+        User user = userService.findUserByName(username);
+        return user.getUsername();
+    }
 
+    @RequestMapping(value = "/register",method = RequestMethod.POST)
+    public String register(User user, Model model)throws Exception{
+        userService.addUser(user);
+        model.addAttribute("user",user);
+        return "success";
+    }
 
 }
 

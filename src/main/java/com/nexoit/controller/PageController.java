@@ -50,6 +50,6 @@ public class PageController {
         System.out.println(userService);
         List<User> userList = userService.getUserList();
         System.out.println(userList.size());
-        return "success";
+        return "success"  ;
     }
 }

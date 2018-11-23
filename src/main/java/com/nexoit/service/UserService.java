@@ -19,4 +19,7 @@ public interface UserService {
 
     //添加用户
     void addUser(User user) throws Exception;
+
+    //删除用户
+    void deleteUser(Integer uid) throws Exception;
 }

@@ -36,6 +36,10 @@
         #{uid},#{username},#{password},#{age},#{gender},#{email})
     </insert>
 
+    <!--删除用户-->
+    <delete id="deleteUser" parameterType="Integer">
+        DELETE  FROM user WHERE uid = #{uid}
+    </delete>
 
 </mapper>
 

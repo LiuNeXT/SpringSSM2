@@ -55,4 +55,9 @@ public class UserServiceTest {
         System.out.println(user);
 
     }
+
+    @Test
+    public void deleteUser()throws Exception{
+        userService.deleteUser(4);
+    }
 }

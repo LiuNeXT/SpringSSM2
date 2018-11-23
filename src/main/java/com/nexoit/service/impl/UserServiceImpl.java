@@ -37,4 +37,10 @@ public class UserServiceImpl implements UserService {
     public User findUserByName(String username) throws Exception {
        return userMapper.findUserByName(username);
     }
+
+    @Override
+    public void deleteUser(Integer uid) throws Exception {
+        userMapper.deleteUser(uid);
+
+    }
 }

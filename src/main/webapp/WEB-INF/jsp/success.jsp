@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +8,8 @@
     <title>成功页面</title>
 </head>
 <body>
-<h1>注册成功</h1>
+<h1>注册成功</h1>${user.username}
+${username}
 <p>欢迎您，${userlist}</p>
 </body>
 </html>

@@ -8,6 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-
+<div id="login">
+    <button  class="" type="button">提交</button>
+</div>
 </body>
+<script type="text/javascript" src=http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+<script type="text/javascript">
+    $("#login>button").click(function () {
+        $.ajax({
+            url:"<%=basePath%>/getUserList",
+            type:"get",
+
+        })
+    })
+</script>
 </html>
+
+
+<div class="sd"></div>

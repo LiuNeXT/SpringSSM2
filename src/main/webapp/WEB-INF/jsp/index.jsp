@@ -7,6 +7,7 @@
 </script>
 <body>
 <h1>${user}</h1>
+<h1>#{user}</h1>
 <h2>Hello World!</h2>
 </body>
 </html>

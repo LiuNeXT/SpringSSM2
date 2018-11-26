@@ -11,6 +11,8 @@
 <h1>注册成功</h1>${user.username}
 ${username}
 <p>欢迎您，${userlist}</p>
+${user}
+${userList}
 </body>
 </html>
 

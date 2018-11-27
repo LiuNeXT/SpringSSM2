@@ -19,37 +19,25 @@ public class PageController {
     @Autowired
     private UserService userService;
 
-    //默认设置跳转首页
-    @RequestMapping("/")
-    public String showIndex() {
-        return "index";
-    }
 
-    //@RequestMapping(value = "/home", method = RequestMethod.GET)
-    @RequestMapping("/home")
-    public  String showHome(Model model) {
-        model.addAttribute("user","SpringSSMtest");
-        return "success";
-    }
-
-    @RequestMapping("/login")
-    public  String showLogin(Model model) {
-        model.addAttribute("user","SpringSSMtest");
-        return "success";
-    }
-
-
-/*    //请求什么页面，就跳转什么页面
+    /**
+     * Show page string.
+     * 写什么界面就跳转到什么界面
+     * @param page the page
+     * @return the string
+     */
     @RequestMapping("/{page}")
     public String showPage(@PathVariable String page) {
         return page;
-    }*/
+    }
 
-    @RequestMapping("/test")
-    public  String test(Model model) throws Exception {
-        System.out.println(userService);
-        List<User> userList = userService.getUserList();
-        System.out.println(userList.size());
-        return "success"  ;
+    /**
+     * Upload form string.
+     * 上传界面
+     * @return the string
+     */
+    @RequestMapping(value = "/upload", method = RequestMethod.GET)
+    public String uploadForm() {
+        return "uploadForm";
     }
 }

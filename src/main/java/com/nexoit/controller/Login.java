@@ -24,7 +24,7 @@ public class Login {
         }else {
             String error = "用户名或者密码出错";
             model.addAttribute("error",error);
-            return "/login.jsp";
+            return "login";
         }
     }
 }

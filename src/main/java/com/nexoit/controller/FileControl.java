@@ -54,7 +54,7 @@ public class FileControl {
      * @param response the response
      * @throws Exception the exception
      */
-    @RequestMapping(value = "down", method = RequestMethod.POST)
+    @RequestMapping(value = "/down", method = RequestMethod.POST)
     public void download(HttpServletRequest request, HttpServletResponse response) throws Exception {
 
         //获取路径文件
@@ -68,8 +68,8 @@ public class FileControl {
 
         //设置文件下载头
         response.addHeader("Content-Disposition", "attachment;filename=" + filename1);
-
         response.setContentType("multipart/form-data");
+
         BufferedOutputStream out = new BufferedOutputStream(response.getOutputStream());
 
         int len = 0;

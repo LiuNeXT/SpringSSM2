@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class PageController {
 
 
-    @Autowired
-    private UserService userService;
 
+    //默认返回首页
+    @RequestMapping("/")
+    public String index(){
+        return "index";
+    }
 
     /**
      * Show page string.

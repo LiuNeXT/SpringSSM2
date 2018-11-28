@@ -6,7 +6,7 @@
 <configuration>
     <!-- 别名 -->
     <typeAliases>
-
         <package name="com.nexoit.pojo"/>
+
     </typeAliases>
 </configuration>

@@ -1,15 +1,20 @@
 package com.nexoit.pojo;
 
+import org.springframework.data.jpa.repository.EntityGraph;
+
+import java.io.Serializable;
 import java.util.List;
 
-public class Classroom {
+
+
+public class Classroom implements Serializable {
 
     private Integer classId;
 
     private String classRoomName;
 
-
-    private List<User> student;
+/*
+    private List<User> student;*/
 
     public Integer getClassId() {
         return classId;
@@ -27,20 +32,20 @@ public class Classroom {
         this.classRoomName = classRoomName;
     }
 
-    public List<User> getStudent() {
+  /*  public List<User> getStudent() {
         return student;
     }
 
     public void setStudent(List<User> student) {
         this.student = student;
-    }
+    }*/
 
-    @Override
+   /* @Override
     public String toString() {
         return "Classroom{" +
                 "classId=" + classId +
                 ", classRoomName='" + classRoomName + '\'' +
                 ", student=" + student +
                 '}';
-    }
+    }*/
 }

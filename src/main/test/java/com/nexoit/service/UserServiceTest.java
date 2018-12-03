@@ -1,7 +1,10 @@
 package com.nexoit.service;
 
+import com.nexoit.mapper.ClassroomMapper;
+import com.nexoit.pojo.Classroom;
 import com.nexoit.pojo.User;
 import com.nexoit.service.impl.UserServiceImpl;
+import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -11,6 +14,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import javax.annotation.Resource;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -24,6 +28,9 @@ public class UserServiceTest {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private ClassroomMapper classroomMapper;
 
     @Test
     public void getUserList() throws Exception {
@@ -59,5 +66,18 @@ public class UserServiceTest {
     @Test
     public void deleteUser()throws Exception{
         userService.deleteUser(4);
+    }
+
+
+    @Test
+    public void  getClassroom() throws Exception{
+        Classroom classroom = new Classroom();
+        classroom.setClassId(1);
+        classroom.setClassRoomName("sd");
+        System.out.println(classroom);
+        classroomMapper.save(classroom);
+
+        //Assert.assertNotNull(Arrays.asList(classroom).size());
+
     }
 }

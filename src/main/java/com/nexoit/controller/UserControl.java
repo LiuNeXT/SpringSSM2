@@ -45,7 +45,7 @@ public class UserControl {
         School school = new School();
         classInfo.setClassId(2);
         classInfo.setClassRoomName("语文");
-        classInfo.setStudent(userList);
+ /*       classInfo.setStudent(userList);*/
         school.setSid(1);
         school.setSname("新塘中学");
         school.setSclassrooms(Arrays.asList(classInfo));

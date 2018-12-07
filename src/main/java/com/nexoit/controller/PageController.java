@@ -23,10 +23,12 @@ public class PageController {
      * 写什么界面就跳转到什么界面
      * @param page the page
      * @return the string
-     */
+     /*  */
+
+    /*
     @RequestMapping("/{page}")
     public String showPage(@PathVariable String page) {
         return page;
-    }
+    }*/
 
 }

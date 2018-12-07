@@ -19,6 +19,12 @@ import java.net.URLEncoder;
 public class FileControl {
 
 
+    @RequestMapping("/test")
+    public void test() throws IOException {
+
+    }
+
+
     /**
      * Upload string.
      * 文件上传功能

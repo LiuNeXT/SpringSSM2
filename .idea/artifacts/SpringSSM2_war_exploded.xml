@@ -47,6 +47,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.2" />
           <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.7" />
+          <element id="library" level="project" name="Maven: org.csource:fastdfs-client-java:1.27-SNAPSHOT" />
         </element>
       </element>
       <element id="directory" name="META-INF">

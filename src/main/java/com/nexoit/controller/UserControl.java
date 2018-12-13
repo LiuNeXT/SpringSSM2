@@ -5,12 +5,12 @@ import com.nexoit.pojo.Classroom;
 import com.nexoit.pojo.School;
 import com.nexoit.pojo.User;
 import com.nexoit.service.UserService;
-import com.sun.tools.javac.code.Attribute;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -49,7 +49,6 @@ public class UserControl {
         school.setSid(1);
         school.setSname("新塘中学");
         school.setSclassrooms(Arrays.asList(classInfo));
-
         return school;
     }
 }

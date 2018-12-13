@@ -25,10 +25,11 @@ public class PageController {
      * @return the string
      /*  */
 
-    /*
     @RequestMapping("/{page}")
     public String showPage(@PathVariable String page) {
         return page;
-    }*/
+    }
 
+
+    
 }

@@ -1,16 +1,5 @@
 package com.nexoit.utils;
 
-import org.apache.commons.io.IOUtils;
-import org.csource.common.MyException;
-import org.csource.common.NameValuePair;
-import org.csource.fastdfs.*;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.UUID;
 
 
 public class FastFsdUtils {
@@ -20,7 +9,7 @@ public class FastFsdUtils {
 
     public String local_filename = "C:\\timg.jpg";
 
-
+/*
     public void upload() {
         try {
             ClientGlobal.init(conf_filename);
@@ -110,10 +99,10 @@ public class FastFsdUtils {
     }
 
 
-    /**
+    *//**
      * 删除文件用例
      * Test delete.
-     */
+     *//*
 
     public Integer delete(String gruopID, String path) {
 
@@ -135,6 +124,6 @@ public class FastFsdUtils {
         return i;
 
 
-    }
+    }*/
 }
 

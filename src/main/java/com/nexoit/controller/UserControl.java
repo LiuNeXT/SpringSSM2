@@ -1,6 +1,8 @@
 package com.nexoit.controller;
 
 
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.nexoit.pojo.Classroom;
 import com.nexoit.pojo.School;
 import com.nexoit.pojo.User;
@@ -24,7 +26,14 @@ public class UserControl {
     @RequestMapping(value = "/getuserlist", method = RequestMethod.GET)
     @ResponseBody  //返回Json格式
     public List<User> getUserList() throws Exception {
+        PageHelper.startPage(1,10);
         List<User> userList = userService.getUserList();
+        PageInfo<User> pageInfo = new PageInfo<>(userList);
+//        System.out.println(pageInfo.getTotal());
+//        System.out.println(pageInfo.getPageSize());
+//        System.out.println(pageInfo.getEndRow());
+//        System.out.println(pageInfo.getNextPage());
+//        System.out.println(pageInfo.getLastPage());
         return userList;
 
     }

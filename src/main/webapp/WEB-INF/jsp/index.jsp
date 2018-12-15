@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
 <html lang="zh">
 <head>
@@ -8,7 +9,9 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Hello World , Java</h1>
-<h2>Alex.Liu</h2>
+<h1>${content}</h1>
+<h2>${name}</h2>
+<p>
+</p>
 </body>
 </html>

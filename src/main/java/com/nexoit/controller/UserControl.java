@@ -34,6 +34,7 @@ public class UserControl {
 //        System.out.println(pageInfo.getEndRow());
 //        System.out.println(pageInfo.getNextPage());
 //        System.out.println(pageInfo.getLastPage());
+
         return userList;
 
     }
@@ -46,7 +47,7 @@ public class UserControl {
     }
 
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @RequestMapping(value = "/gettitle", method = RequestMethod.GET)
     @ResponseBody
     public School test() throws Exception {
         List<User> userList = userService.getUserList();

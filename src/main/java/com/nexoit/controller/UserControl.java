@@ -39,6 +39,7 @@ public class UserControl {
 
     }
 
+
     @RequestMapping(value = "/checkUsername", method = RequestMethod.POST)
     @ResponseBody
     public String checkUserName(String username) throws Exception {

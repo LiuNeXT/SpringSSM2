@@ -18,14 +18,14 @@ public class PageController {
     private UserService userService;
 
     //默认返回首页
-    @RequestMapping("/index")
+   /* @RequestMapping("/index")
     public String index(Model model) {
         String name = "Alex";
         String content = "Hello World , Java";
         model.addAttribute("name", name);
         model.addAttribute("content", content);
         return "index";
-    }
+    }*/
 
 
     //返回测试页
@@ -37,12 +37,12 @@ public class PageController {
     }
 
     //另一种写法,使用ModelAndView
-    @RequestMapping("/modeltest")
+    @RequestMapping("/getusers")
     public ModelAndView modelTest() throws Exception {
         List<User> userList = userService.getUserList();
         ModelAndView mav = new ModelAndView();
         mav.addObject("userList", userList);
-        mav.setViewName("test");
+        mav.setViewName("index");
         return mav;
     }
 
